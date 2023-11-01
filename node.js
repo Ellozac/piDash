@@ -11,6 +11,12 @@ app.get("/", (req, res) => {
   res.redirect("/login.html");
 });
 
+
+app.post("/loginReq", (req, res) => {
+  const { username, password } = req.body;
+  console.log(username)
+})
+
 var server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
