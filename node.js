@@ -4,7 +4,7 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const port = 8080;
 let db = new sqlite.Database('database.sqlite');
-db.run("CREATE TABLE IF NOT EXISTS users(id PRIMARY INTEGER AUTOINCREMENT NOT NULL, username TEXT NOT NULL, password TEXT NOT NULL, email TEXT);");
+db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, password TEXT NOT NULL, email TEXT);");
 app.use(express.static("public")); 
 app.use(express.json());
 
@@ -16,12 +16,13 @@ app.get("/", (req, res) => {
 app.post("/loginReq", (req, res) => {
   const { username, password } = req.body;
   // Add username password check then return signed JWT token 
-  res.sendStatus(200)
+  res.sendStatus(200);
 });
 
 app.post("/signupInfo", (req, res) => {
-  // add signup handle
-  res.sendStatus(200)
+  const { username, password, email } = req.body;
+  console.log(email, password, username)
+  res.sendStatus(200);
 });
 
 var server = app.listen(port, () => {
