@@ -12,6 +12,9 @@ window.addEventListener('load', () => {
       body: JSON.stringify(signDetails),
     })
     .then(response => response.json())
+    .then(status => {
+        console.log(status.status())
+      })
   });
 })
 
