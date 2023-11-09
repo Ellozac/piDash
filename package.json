@@ -6,6 +6,9 @@
     "sqlite": "^5.1.0-pre1",
     "sqlite3": "^5.1.6"
   },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
   "name": "pidash",
   "version": "1.0.0",
   "main": "node.js",
