@@ -6,5 +6,5 @@ Run the Folowing commands in a terminal
 
 ```
 npm install  # installs all the requred packages
-node .  # runs the web server
+npm run start  # runs the web server
 ```
