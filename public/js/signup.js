@@ -1,4 +1,11 @@
 window.addEventListener('load', () => {
+  const spline = document.getElementById("splineView")
+  var sheet = new CSSStyleSheet
+  sheet.replaceSync( `a#logo {visibility: hidden;`)
+  spline.shadowRoot.adoptedStyleSheets.push(sheet)
+
+
+  
   document.getElementById('signup').addEventListener('submit', (event) => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
