@@ -10,7 +10,7 @@
   "main": "node.js",
   "scripts": {
     "start": "node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "( npm run start ) & sleep 5 ; kill $!"
   },
   "keywords": [],
   "author": "",
